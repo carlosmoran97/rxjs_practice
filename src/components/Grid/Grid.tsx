@@ -1,19 +1,20 @@
 import React from 'react';
-import { Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 import { IZipcode } from '../../types/maps';
 import { GridItem } from './GridItem';
+import './Grid.css';
 
 export interface IGridProps {
   zipcodes: IZipcode[];
-  store: Map<string, Observable<IZipcode>>;
+  store: Map<string, Subject<IZipcode>>;
 }
 
 export const Grid: React.FC<IGridProps> = ({ store }): JSX.Element => {
   return (
-    <div>
+    <div className="Grid">
       {Array.from(store).map(([key, value]) => {
         return (
-          <GridItem key={key} zipcodeObservable={value} />
+          <GridItem key={key} zipcodeSubject={value} />
         );        
       })}
     </div>
