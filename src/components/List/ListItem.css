@@ -1,0 +1,14 @@
+.ListItem {
+  display: flex;
+  align-items: center;
+}
+
+.ListItem input {
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.ListItem span {
+  font-size: 20px;
+}

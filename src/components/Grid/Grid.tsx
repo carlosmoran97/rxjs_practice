@@ -5,7 +5,6 @@ import { GridItem } from './GridItem';
 import './Grid.css';
 
 export interface IGridProps {
-  zipcodes: IZipcode[];
   store: Map<string, Subject<IZipcode>>;
 }
 

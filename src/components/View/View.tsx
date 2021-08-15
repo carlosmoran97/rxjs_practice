@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { IZipcode } from '../../types/maps';
 import { Grid } from '../Grid';
 import { List } from '../List';
+import './View.css';
 
 export interface IViewProps {
   zipcodes: IZipcode[];
@@ -20,9 +21,9 @@ export const View: React.FC<IViewProps> = ({ zipcodes }): JSX.Element => {
   }, []);
 
   return (
-    <div>
-      <Grid zipcodes={zipcodes} store={store} />
-      <List />
+    <div className="View">
+      <Grid store={store} />
+      <List store={store} />
     </div>
   );
 };

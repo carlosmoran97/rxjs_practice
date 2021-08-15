@@ -7,7 +7,7 @@ function App() {
   const [zipcodes] = useState<IZipcode[]>([
     {
       value: '1',
-      selected: false
+      selected: true
     },
     {
       value: '2',
@@ -15,7 +15,7 @@ function App() {
     },
     {
       value: '3',
-      selected: false
+      selected: true
     },
     {
       value: '4',
@@ -23,7 +23,7 @@ function App() {
     },
     {
       value: '5',
-      selected: false
+      selected: true
     },
     {
       value: '6',
@@ -31,7 +31,7 @@ function App() {
     },
     {
       value: '7',
-      selected: false
+      selected: true
     },
     {
       value: '8',
@@ -39,7 +39,7 @@ function App() {
     },
     {
       value: '9',
-      selected: false
+      selected: true
     }
   ]);
   return (

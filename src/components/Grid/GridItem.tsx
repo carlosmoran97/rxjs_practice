@@ -21,8 +21,6 @@ export const GridItem: React.FC<IGridItemProps> = ({ zipcodeSubject }): JSX.Elem
     return () => zipcodeSuscrition?.unsubscribe();
   }, []);
 
-  console.log(`Render: ${zipcode?.value}`);
-
   const onClick = () => {
     zipcodeSubject?.next({
       value: `${zipcode?.value}`,
